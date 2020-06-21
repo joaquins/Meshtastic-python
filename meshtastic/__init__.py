@@ -353,7 +353,7 @@ class StreamInterface(MeshInterface):
                 raise Exception("No Meshtastic devices detected")
             elif len(ports) > 1:
                 raise Exception(
-                    f"Multiple ports detected, you must specify a device, such as {ports[0].device}")
+                    f"Multiple ports detected, you must specify a device, such as {ports[0]}")
             else:
                 devPath = ports[0]
 
