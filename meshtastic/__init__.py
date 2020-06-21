@@ -275,7 +275,7 @@ class MeshInterface:
             n = self._getOrCreateByNum(asDict["from"])
             n["user"] = u
             # We now have a node ID, make sure it is uptodate in that table
-            self.nodes[u["id"]] = u
+            self.nodes[u["id"]]["user"] = u
 
         if meshPacket.decoded.HasField("data"):
             topic = "meshtastic.receive.data"
